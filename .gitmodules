@@ -1,0 +1,3 @@
+[submodule "msys2_gtest_probe"]
+	path = msys2_gtest_probe
+	url = https://github.com/leskojanos/msys2_gtest_probe
