@@ -1,0 +1,3 @@
+[submodule "optimizer/googletest"]
+	path = optimizer/googletest
+	url = https://github.com/google/googletest.git
