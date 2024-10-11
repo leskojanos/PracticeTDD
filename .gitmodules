@@ -1,3 +1,6 @@
 [submodule "optimizer/googletest"]
 	path = optimizer/googletest
 	url = https://github.com/google/googletest.git
+[submodule "msys2_gtest_fibonacci/googletest"]
+	path = msys2_gtest_fibonacci/googletest
+	url = https://github.com/google/googletest.git
