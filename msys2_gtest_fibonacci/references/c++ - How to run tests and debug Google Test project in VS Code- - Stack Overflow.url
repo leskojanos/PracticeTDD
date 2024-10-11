@@ -1,0 +1,2 @@
+[InternetShortcut]
+URL=https://stackoverflow.com/questions/62910867/how-to-run-tests-and-debug-google-test-project-in-vs-code#:~:text=Run:%20cmake%20-Dgtest_build_samples=ON%20-DCMAKE_BUILD_TYPE=Debug%20..%20make
