@@ -7,3 +7,6 @@
 [submodule "optimizer_practice/googletest"]
 	path = optimizer_practice/googletest
 	url = git@github.com:google/googletest.git
+[submodule "googletest_practice_triangle/googletest"]
+	path = googletest_practice_triangle/googletest
+	url = git@github.com:google/googletest.git
