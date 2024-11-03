@@ -1,0 +1,46 @@
+# $ cmake --version
+cmake_minimum_required(VERSION 3.5)
+
+# Set the project name
+project (googletest_practice_triangle)
+
+#get googletest
+include(FetchContent)
+FetchContent_Declare(googletest
+  GIT_REPOSITORY https://github.com/google/googletest
+  GIT_TAG v1.15.2)
+FetchContent_GetProperties(googletest)
+ if(NOT googletest_POPULATED)
+  FetchContent_MakeAvailable(googletest)
+ endif()
+
+# add header files in the lib
+include_directories(lib) 
+
+# Create a sources variable with a link to all cpp files to compile
+set(SOURCES
+    src/main.cpp
+    src/Triangle.cpp
+)
+
+# Add an executable with the above sources
+add_executable(Triangle ${SOURCES})
+
+# Set the directories that should be included in the build command for this target
+
+target_include_directories(Triangle
+    PRIVATE 
+        ${PROJECT_SOURCE_DIR}/lib
+)
+
+enable_testing()
+add_executable(Triangle_test
+  src/Triangle.cpp tests/utest-triangle.cpp 
+)
+
+target_link_libraries(Triangle_test GTest::gtest_main)
+
+#display googletest console colors
+#https://www.rovidit.es/s6cF
+add_test(NAME Triangle_test
+        COMMAND Triangle_test --gtest_color=1)

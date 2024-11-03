@@ -1,12 +1,12 @@
 #include <iostream>
-#include "product.h"
+#include "triangle.h"
 
 
-int main () {
+int main() {
 
-    Product p;
+    Triangle triangle;
 
-    auto c1 = p.computeTriangle(100, 20, 60);
+    int c1 = triangle.computeTriangle(100, 20, 60);
     std::cout << "Haromszog vizsgalat eredmenye: " << c1 << "\n";
 
     return 0;
